@@ -3,6 +3,7 @@ package uniExamProject;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Collection;
 
 @Entity
 public class Employees {
@@ -31,6 +32,17 @@ public class Employees {
     public Employees() {
     }
 
+
+    @OneToMany(mappedBy = "employees", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Collection<Salaries> salaries;
+
+    public Collection<Salaries> getSalaries() {
+        return salaries;
+    }
+
+    public void setSalaries(Collection<Salaries> salaries) {
+        this.salaries = salaries;
+    }
 
     public Long getEmp_no() {
         return emp_no;

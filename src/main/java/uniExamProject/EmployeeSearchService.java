@@ -4,9 +4,9 @@ import java.util.Collection;
 
 public interface EmployeeSearchService {
 
-    public Collection<Employees> listEmployees();
+    Collection<Employees> listEmployees();
 
-    public Collection<Employees> listEmployeesByFirstName(String firstName);
+    Collection<Employees> listEmployeesByFirstName(String firstName);
 
-    public Collection<Employees> listEmployeesByLastName(String lastName);
+    Collection<Employees> listEmployeesByLastName(String lastName);
 }
