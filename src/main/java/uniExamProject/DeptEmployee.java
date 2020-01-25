@@ -6,7 +6,6 @@ import java.sql.Date;
 @Entity
 public class DeptEmployee {
 
-
     @Column(name = "emp_no", nullable = false)
     private Long emp_no;
 
