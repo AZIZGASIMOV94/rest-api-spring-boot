@@ -21,4 +21,14 @@ public class WebConfiguration {
     public TitileSearchService titileSearchService(TitileRepository titileRepository){
         return new TitileSearchServiceImpl(titileRepository);
     }
+
+    @Bean
+    public DepartmentsSearchService departmentsSearchService(DepartmentsRepository departmentsRepository){
+        return new DepartmentsSearchServiceImpl(departmentsRepository);
+    }
+
+    @Bean
+    public DeptEmployeeSearchService deptEmployeeSearchService(DeptEmployeeRepository deptEmployeeRepository){
+        return new DeptEmployeeSearchServiceImpl(deptEmployeeRepository);
+    }
 }
