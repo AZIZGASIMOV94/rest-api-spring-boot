@@ -31,6 +31,7 @@ public class Employees {
     public Employees() {
     }
 
+
     public Long getEmp_no() {
         return emp_no;
     }
