@@ -10,6 +10,7 @@ public class Salaries {
     @Column(name = "emp_no", nullable = false)
     private Long emp_no;
 
+
     @Column(name = "salary", nullable = false)
     private int salary;
 
