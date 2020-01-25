@@ -23,6 +23,30 @@ public class DeptManager {
 
     }
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "emp_no", nullable = false, insertable = false, updatable = false)
+    private Employees employees;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "dept_no", nullable = false, insertable = false, updatable = false)
+    private Departments departments;
+
+    public Employees getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Employees employees) {
+        this.employees = employees;
+    }
+
+    public Departments getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Departments departments) {
+        this.departments = departments;
+    }
+
     public Long getDept_no() {
         return dept_no;
     }

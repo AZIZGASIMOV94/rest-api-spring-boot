@@ -20,6 +20,17 @@ public class Departments {
     @OneToMany(mappedBy = "departments", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Collection<DeptEmployee> deptEmployee;
 
+    @OneToMany(mappedBy = "departments", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Collection<DeptManager> deptManagers;
+
+    public Collection<DeptManager> getDeptManagers() {
+        return deptManagers;
+    }
+
+    public void setDeptManagers(Collection<DeptManager> deptManagers) {
+        this.deptManagers = deptManagers;
+    }
+
     public Collection<DeptEmployee> getDeptEmployee() {
         return deptEmployee;
     }
