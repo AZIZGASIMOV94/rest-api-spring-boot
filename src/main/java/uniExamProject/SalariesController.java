@@ -12,7 +12,7 @@ public class SalariesController {
     @Autowired
     private  SalarySearchService salarySearchService;
 
-    @RequestMapping(value = {"/all"},method = RequestMethod.GET)
+    @RequestMapping(value = {"/all"}, method = RequestMethod.GET)
     public Collection<Salaries> fetchAllSalaries(){
         return salarySearchService.listSalaries();
     }

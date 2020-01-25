@@ -11,4 +11,14 @@ public class WebConfiguration {
     public EmployeeSearchService employeeSearchService(EmployeeRepository employeeRepository){
         return new EmployeeSearchServiceImpl(employeeRepository);
     }
+
+    @Bean
+    public SalarySearchService salarySearchService(SalaryRepository salaryRepository){
+        return new SalarySearchServiceImpl(salaryRepository);
+    }
+
+    @Bean
+    public TitileSearchService titileSearchService(TitileRepository titileRepository){
+        return new TitileSearchServiceImpl(titileRepository);
+    }
 }

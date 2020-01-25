@@ -5,38 +5,28 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-public class Salaries {
+public class Titles {
 
     @Column(name = "emp_no", nullable = false)
     private Long emp_no;
 
-    @Column(name = "salary", nullable = false)
-    private Long salary;
-
     @Id
+    @Column(name = "title", nullable = false)
+    private String title;
+
     @Column(name = "from_date", nullable = false)
     private Date from_date;
 
     @Column(name = "to_date", nullable = false)
     private Date to_date;
 
-
-    public Salaries() {
+    public Titles() {
 
     }
-
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "emp_no", nullable = false, insertable = false, updatable = false)
     private Employees employees;
-
-    public Employees getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Employees employees) {
-        this.employees = employees;
-    }
 
     public Long getEmp_no() {
         return emp_no;
@@ -46,12 +36,12 @@ public class Salaries {
         this.emp_no = emp_no;
     }
 
-    public Long getSalary() {
-        return salary;
+    public String getTitle() {
+        return title;
     }
 
-    public void setSalary(Long salary) {
-        this.salary = salary;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public Date getFrom_date() {
@@ -72,9 +62,9 @@ public class Salaries {
 
     @Override
     public String toString() {
-        return "Salaries{" +
+        return "Titles{" +
                 "emp_no=" + emp_no +
-                ", salary=" + salary +
+                ", title='" + title + '\'' +
                 ", from_date=" + from_date +
                 ", to_date=" + to_date +
                 '}';

@@ -36,6 +36,17 @@ public class Employees {
     @OneToMany(mappedBy = "employees", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Collection<Salaries> salaries;
 
+    @OneToMany(mappedBy = "employees", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Collection<Titles> titiles;
+
+    public Collection<Titles> getTitiles() {
+        return titiles;
+    }
+
+    public void setTitiles(Collection<Titles> titiles) {
+        this.titiles = titiles;
+    }
+
     public Collection<Salaries> getSalaries() {
         return salaries;
     }
