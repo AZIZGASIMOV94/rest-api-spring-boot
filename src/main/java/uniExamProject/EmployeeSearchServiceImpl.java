@@ -11,7 +11,19 @@ public class EmployeeSearchServiceImpl implements EmployeeSearchService {
     }
 
     @Override
-    public Collection<Employee> listEmployees() {
-        return (Collection<Employee>) employeeRepository.findAll();
+    public Collection<Employees> listEmployees() {
+        return (Collection<Employees>) employeeRepository.findAll();
     }
+
+    @Override
+    public Collection<Employees> listEmployeesByFirstName(String firstName) {
+         return employeeRepository.findAllByFirstName(firstName);
+
+    }
+
+    @Override
+    public Collection<Employees> listEmployeesByLastName(String lastName) {
+        return employeeRepository.findAllByLastName(lastName);
+    }
+
 }
