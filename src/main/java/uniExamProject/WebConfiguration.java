@@ -3,6 +3,9 @@ package uniExamProject;
 
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
+import uniExamProject.repository.*;
+import uniExamProject.services.*;
+import uniExamProject.servicesImpl.*;
 
 @SpringBootConfiguration
 public class WebConfiguration {
