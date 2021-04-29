@@ -1,4 +1,4 @@
-# uniExamProjectAziz
+# Restful Api using Spring and public Employee database
 examProject(alpha)
 
 
